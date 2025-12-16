@@ -127,7 +127,9 @@ def create_mysql_tables(engine):
 
 
 def insert_sample_data(engine, csv_file):
-    df = pd.read_csv(csv_file)
+    df = pd.read_csv(csv_file, low_memory=False)
+    df = df.where(pd.notnull(df), None)
+
 
     with engine.connect() as conn:
         # --- Fill Director Entity Table ---
