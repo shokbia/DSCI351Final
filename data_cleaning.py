@@ -12,9 +12,9 @@ import numpy as np
 
 
 def run_data_cleaning(
-    movies_path="movies.csv",
-    tv_shows_path="tv_shows.csv",
-    netflix_titles_path="netflix_titles.csv",
+    movies_path="/content/movies.csv",
+    tv_shows_path="/content/tv_shows.csv",
+    netflix_titles_path="/content/_netflix_titles.csv",
     output_path="cleaned_netflix_movies.csv"
 ):
     """
